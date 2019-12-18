@@ -49,7 +49,7 @@ module github.com/rbarec/gorb-gotopro/leve01/hello
 ## Adding a dependency
 
 ## FAQ - Software Dependency Problem [[KNOW]]
-Note that while the go command makes adding a new dependency quick and easy, it is not without cost. Your module now literally depends on the new dependency in critical areas such as correctness, security, and proper licensing, just to name a few. For more considerations, see Russ Cox's blog post, *“Our Software Dependency Problem.”*
+Note that while the go command makes adding a new dependency quick and easy, it is not without cost. Your module now literally depends on the new dependency in critical areas such as correctness, security, and proper licensing, just to name a few. For more considerations, see Russ Cox's blog post, *ï¿½Our Software Dependency Problem.ï¿½*
 URL> https://research.swtch.com/deps  {{CANDIDATE}}
 
 
