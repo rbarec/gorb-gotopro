@@ -1,4 +1,4 @@
-package pg01
+package pg02
 
 import (
 	"testing"

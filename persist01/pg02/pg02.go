@@ -1,4 +1,12 @@
-package pg01
+/*
+
+CMD Commands:
+ go mod init github.com/rbarec/gorb-gotopro/persist01/pg01
+ go test
+
+*/
+package pg02
+
 
 import (
 	"database/sql"
@@ -9,18 +17,6 @@ import (
 
 // go mod init github.com/rbarec/gorb-gotopro/persist01/pg01
 // go test
-
-type PersonaModel struct {
-	//	Id 		  bson.ObjectId `bson:"_id" json:"id" `
-	Id       uint16 `pg:"id" json:"id" `
-	Cdn      string `pg:"cdn"    json:"cdn"`
-	IdenTyp  string `pg:"identyp"    json:"identTyp"`
-	Iden     string `pg:"ident"    json:"Ident"`
-	Names    string `pg:"nmes"   json:"Names"`
-	SurNames string `pg:"snames" json:"SurNames"`
-	//	Fnac      time.Time `pg:"Fnac" json:"Fnac"`
-
-}
 
 // GLOBAL_VAR
 var db *sql.DB
@@ -51,7 +47,7 @@ func Dao_getAll(iden string) []*PersonaModel {
 	//Iterar en un Slice
 	// 	for _, per := range *lPersonsPTR {  .\pg02.go:52:22: invalid indirect of lPersonsPTR (type []*PersonaModel)
 	for _, per := range lPersonsPTR {
-		fmt.Printf("Nombre ::: %s  %s\n", per.Names, per.SurNames)
+		fmt.Printf("Nombre ::: %s  \n", per.toStringName() )
 		fmt.Println("")
 	}
 

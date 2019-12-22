@@ -1,4 +1,4 @@
-module github.com/rbarec/gorb-gotopro/persist01/pg01
+module github.com/rbarec/gorb-gotopro/persist01/pg02
 
 go 1.13
 
